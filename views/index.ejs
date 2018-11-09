@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>instantMeteo.js</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <script>
+      var images=['http://www.kinyu-z.net/data/wallpapers/36/825476.jpg', 'http://www.kinyu-z.net/data/wallpapers/36/825487.jpg', 'http://www.kinyu-z.net/data/wallpapers/36/825495.jpg', 'http://www.kinyu-z.net/data/wallpapers/36/825519.jpg'];
+
+setInterval(function(){
+  var url=images[Math.floor(Math.random() * images.length)];
+  document.body.style.backgroundImage = 'url('+url+')';  
+},10000);
+    </script>
+  </head>
+  <body class="home">
+    <div class="container">
+      <div class="block-1">
+      <h1>instantMeteo.js 🌤</h1>
+      <fieldset>
+        <form action="/weather" method="post">
+          <input name="city" type="text" class="ghost-input" placeholder="Choisissez une ville" required>
+          <input type="submit" class="ghost-button" value="Obtenir la météo">
+        </form>
+      </fieldset>
+    </div>
+  </div>
+  </body>
+</html>
